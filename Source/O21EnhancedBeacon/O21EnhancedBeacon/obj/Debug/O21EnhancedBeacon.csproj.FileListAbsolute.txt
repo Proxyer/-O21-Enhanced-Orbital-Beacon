@@ -1,0 +1,4 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\[O21] Enhanced Orbital Beacon\Assemblies\O21EnhancedBeacon.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\[O21] Enhanced Orbital Beacon\Source\O21EnhancedBeacon\O21EnhancedBeacon\obj\Debug\O21EnhancedBeacon.csprojAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\[O21] Enhanced Orbital Beacon\Source\O21EnhancedBeacon\O21EnhancedBeacon\obj\Debug\O21EnhancedBeacon.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\[O21] Enhanced Orbital Beacon\Source\O21EnhancedBeacon\O21EnhancedBeacon\obj\Debug\O21EnhancedBeacon.dll

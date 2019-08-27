@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>O21_EnhancedBeacon_Ambient</defName>
+		<sustain>True</sustain>  
+		<context>MapOnly</context>
+		<eventNames />
+    	<priorityMode>PrioritizeNearest</priorityMode>  
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EnhancedBeacon/ambient</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>5.0</min>        
+					<max>10.0</max>
+				</volumeRange>  
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>O21_EnhancedBeacon_Ping</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EnhancedBeacon/ping</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>12.0</min>        
+					<max>25.0</max>
+				</volumeRange>  
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>O21_EnhancedBeacon_Startup</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EnhancedBeacon/startup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>20.0</min>        
+					<max>60.0</max>
+				</volumeRange>  
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>O21_EnhancedBeacon_Shutdown</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EnhancedBeacon/shutdown</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>20.0</min>        
+					<max>60.0</max>
+				</volumeRange>  
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

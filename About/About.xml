@@ -1,0 +1,9 @@
+<ModMetaData>
+  <name>[O21] Enhanced Orbital Beacon</name>
+  <author>Neronix17</author>
+  <url></url>  
+  <supportedVersions>
+    <li>1.0</li>    
+  </supportedVersions>  
+  <description>Adds a larger Orbital Beacon which uses variable power (controlled by size of home zone in its map) to allow home zone coverage instead of a small radius for orbital trade.</description>
+</ModMetaData>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>O21_EnhancedOrbitalBeacon</defName>
+		<label>enhanced orbital beacon</label>
+		<description>An upgraded beacon that uses a variable power cost depending on the area it has to scan. Scanning relies on the home zone, so only things inside that zone will be able to be sold. If an enhanced beacon exists, the normal beacons will cease functioning entirely, so make sure you can power it if you build it.</description>
+    	<thingClass>Building_CommsConsole</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/EnhancedOrbitalBeacon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(13, 13)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Buildings/EnhancedOrbitalBeacon_UI</uiIconPath>
+		<uiIconScale>0.9</uiIconScale>
+
+		<size>(3, 3)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<hasInteractionCell>True</hasInteractionCell>
+    	<interactionCellOffset>(0,0,2)</interactionCellOffset>
+
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.3</Flammability>
+			<Beauty>10</Beauty>
+		</statBases>
+		
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<costList>
+			<Steel>300</Steel>
+			<Plasteel>30</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="O21EnhancedBeacon.CompProperties_EnhancedBeacon">
+				<ambientSound>O21_EnhancedBeacon_Ambient</ambientSound>
+				<pingSound>O21_EnhancedBeacon_Ping</pingSound>
+				<startupSound>O21_EnhancedBeacon_Startup</startupSound>
+				<shutdownSound>O21_EnhancedBeacon_Shutdown</shutdownSound>
+			</li>
+		</comps>
+
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Misc</designationCategory>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+</Defs>
