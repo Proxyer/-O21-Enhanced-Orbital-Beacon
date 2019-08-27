@@ -22,22 +22,27 @@ namespace O21EnhancedBeacon
         }
 
         [HarmonyPatch(typeof(TradeShip), "ColonyThingsWillingToBuy")]
-        public static class TradeShip_ColonyThingswillingToBuy
+        public static class TradeShip_ColonyThingsWillingToBuy
         {
             static void Postfix(TradeShip __instance, ref IEnumerable<Thing> __result)
             {
                 if(__instance.Map.listerBuildings.allBuildingsColonist.Any(b => b.def.HasComp(typeof(Comp_EnhancedBeacon))))
                 {
                     List<Thing> things = new List<Thing>();
-                    IEnumerable<Thing> enumerable = from thing in __instance.Map.listerThings.AllThings
-                                                    where thing.def.category == ThingCategory.Item
-                                                    && TradeUtility.PlayerSellableNow(thing)
-                                                    && !thing.Position.Fogged(thing.Map)
-                                                    && (thing.Map.areaManager.Home[thing.Position] || thing.IsInAnyStorage())
-                                                    select thing;
-                    foreach (Thing thing in enumerable)
+                    List<Zone> tradeZones = __instance.Map.zoneManager.AllZones.Where(z => z is Zone_Stockpile).ToList();
+                    //IEnumerable<Thing> enumerable = from thing in __instance.Map.listerThings.AllThings
+                    //                                where thing.def.category == ThingCategory.Item
+                    //                                && TradeUtility.PlayerSellableNow(thing)
+                    //                                && !thing.Position.Fogged(thing.Map)
+                    //                                && (thing.Map.areaManager.Home[thing.Position] || thing.IsInAnyStorage())
+                    //                                select thing;
+                    //foreach (Thing thing in enumerable)
+                    //{
+                    //    things.Add(thing);
+                    //}
+                    foreach(Zone zone in tradeZones)
                     {
-                        things.Add(thing);
+                        things.AddRange(zone.AllContainedThings);
                     }
                     __result = things.AsEnumerable<Thing>();
                 }

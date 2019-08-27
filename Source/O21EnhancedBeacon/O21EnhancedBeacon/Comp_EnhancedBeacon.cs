@@ -42,12 +42,20 @@ namespace O21EnhancedBeacon
             {
                 if (compPowerTrader != null)
                 {
-                    int homeSize = this.parent.Map.areaManager.Home.TrueCount;
-                    if (homeSize < 193)
+                    int tradeZoneCount = 0;
+                    List<Zone> tradeZones = this.parent.Map.zoneManager.AllZones.Where(z => z is Zone_Stockpile).ToList();
+                    if (!tradeZones.NullOrEmpty())
+                    {
+                        foreach(Zone zone in tradeZones)
+                        {
+                            tradeZoneCount += zone.Cells.Count;
+                        }
+                    }
+                    if (tradeZoneCount < 193)
                     {
                         return;
                     }
-                    compPowerTrader.PowerOutput = -(compPowerTrader.Props.basePowerConsumption + (EnhancedBeaconMod.mod.settings.powerCostOverride * (homeSize - 193)));
+                    compPowerTrader.PowerOutput = -(compPowerTrader.Props.basePowerConsumption + (EnhancedBeaconMod.mod.settings.powerCostOverride * (tradeZoneCount - 193)));
                 }
             }
         }
