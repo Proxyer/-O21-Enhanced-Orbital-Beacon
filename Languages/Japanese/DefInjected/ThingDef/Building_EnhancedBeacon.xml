@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <O21_EnhancedOrbitalBeacon.label>強化ビーコン</O21_EnhancedOrbitalBeacon.label>
+  <O21_EnhancedOrbitalBeacon.description>スキャンするエリアの大きさに応じて消費電力が可変するように強化された衛星ビーコンです。スキャン範囲はホームエリアに依存しているので、そのエリア内のものだけが取引の対象になります。強化ビーコンが存在する場合、通常の貿易用ビーコンは完全に機能しなくなるため、建設する場合は電気が接続できることを確認してください。</O21_EnhancedOrbitalBeacon.description>
+  <Blueprint_O21_EnhancedOrbitalBeacon.label>強化ビーコン(設計)</Blueprint_O21_EnhancedOrbitalBeacon.label>
+  <Frame_O21_EnhancedOrbitalBeacon.label>強化ビーコン(施行)</Frame_O21_EnhancedOrbitalBeacon.label>
+  <Frame_O21_EnhancedOrbitalBeacon.description>スキャンするエリアの大きさに応じて消費電力が可変するように強化された衛星ビーコンです。スキャン範囲はホームエリアに依存しているので、そのエリア内のものだけが取引の対象になります。強化ビーコンが存在する場合、通常の貿易用ビーコンは完全に機能しなくなるため、建設する場合は電気が接続できることを確認してください。</Frame_O21_EnhancedOrbitalBeacon.description>
+
+</LanguageData>
